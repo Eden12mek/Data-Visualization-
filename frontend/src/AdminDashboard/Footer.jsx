@@ -17,7 +17,7 @@ const Footer = () => {
         px={4}
       >
         <Text fontSize="sm" color="gray.500">
-          &copy; © Eden Mekonnen 2024
+          &copy; Eden Mekonnen 2024
         </Text>
         <Flex alignItems="center">
           <Link mx={2} fontSize="sm" color="gray.500">

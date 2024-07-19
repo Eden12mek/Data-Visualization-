@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Box,
   Container,
@@ -71,22 +71,6 @@ const AdminDashboard = () => {
     'USA', 'Canada', 'Mexico', 
   ];
 
-  const [data, setData] = useState([]);
-
-  
-    const fetchDataFromApi = async () => {
-      const API_URL = "http://localhost:4000";
-      try {
-        const response = await axios.get(`${API_URL}/api/data`);
-        setData(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-    useEffect(() => {
-    fetchDataFromApi();
-  }, []);
-
   // Post data to API
   const postDataToApi = async (dataToPost) => {
     const API_URL = "http://localhost:4000";
@@ -118,13 +102,14 @@ const AdminDashboard = () => {
   };
 
   return (
-    <>
-      <Drawer placement="left" isOpen={true} onClose={onClose} isFullHeight={true} zIndex={1}>
+    <Container>
+      
+
+      <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent
           bg={useColorModeValue("gray.100", "gray.800")}
           color={useColorModeValue("gray.800", "white")}
-          maxW="250px"
         >
           <DrawerHeader
             borderBottomWidth="1px"
@@ -134,8 +119,7 @@ const AdminDashboard = () => {
             display="flex"
             alignItems="center"
           >
-            {/* Optionally, you can keep a header here */}
-            Admin Dashboard
+            <SettingsIcon mr={2} /> Admin Dashboard
           </DrawerHeader>
           <DrawerBody>
             <Text fontSize="lg" mb={2} fontWeight="bold">
@@ -147,17 +131,21 @@ const AdminDashboard = () => {
             />
 
             <List spacing={3}>
-              <ListItem cursor="pointer">
+              <ListItem cursor="pointer" onClick={handleOpenModal}>
                 <ListIcon as={MdAdd} fontSize="xl" />
                 Add Data
               </ListItem>
               <ListItem cursor="pointer">
-                <ListIcon as={MdDashboard} fontSize="xl" />
-                Dashboard
+                <Link to="/">
+                  <ListIcon as={MdDashboard} fontSize="xl" />
+                  Dashboard
+                </Link>
               </ListItem>
               <ListItem cursor="pointer">
-                <ListIcon as={MdPerson} fontSize="xl" />
-                Profile
+                <Link to="/">
+                  <ListIcon as={MdPerson} fontSize="xl" />
+                  Profile
+                </Link>
               </ListItem>
               <ListItem cursor="pointer">
                 <ListIcon as={MdSettings} fontSize="xl" />
@@ -212,7 +200,7 @@ const AdminDashboard = () => {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </Container>
   );
 };
 
