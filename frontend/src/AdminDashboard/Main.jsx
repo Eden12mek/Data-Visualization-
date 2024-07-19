@@ -205,13 +205,11 @@ const Main = () => {
                 <Text ml={2}>Add Data</Text>
               </Box>
             </ListItem>
-
-
           </List>
         </Box>
 
         {/* Main Content */}
-        <Flex ml="200px" direction="column" p={5}>
+        <Flex ml="200px" direction="column" p={5} pb="100px">
           <IntensityChart data={data} />
           <Flex direction={{ base: "column", md: "row" }} m={5}>
             <Box
@@ -247,19 +245,20 @@ const Main = () => {
           <CountryChart data={data} />
           <Footer />
         </Flex>
+
       </Flex>
 
       {/* Modal for Add Data */}
       <Modal isOpen={isOpenModal} onClose={handleCloseModal}>
         <ModalOverlay />
-        <ModalContent mr={-60} w="90%" maxW="1000px">
+        <ModalContent  mr={-60} w="90%" maxW="1000px" >
           <ModalHeader>Add Data</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <form onSubmit={handleAddData}>
               <Flex wrap="wrap" justify="space-between" spacing={4}>
                 {Object.keys(formData).map((key) => (
-                  <Box key={key} w={['100%', '50%', '30%']} mb={4}>
+                  <Box key={key} w={['100%', '50%', '30%']} mb={2}>
                     <div>
                       <label>{key.replace('_', ' ').replace(/^\w/, (c) => c.toUpperCase())}</label>
                       {key === 'country' ? (

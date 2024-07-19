@@ -33,9 +33,10 @@ const IntensityChart = ({ data }) => {
       {
         label: 'Intensity',
         backgroundColor: intensityData.map((value) => getColor(value)),
-        borderColor: 'rgba(0,0,0,1)',
-        borderWidth: 1,
+        borderColor: 'transparent', 
+        borderWidth: 0,
         data: intensityData,
+        borderRadius: 10,
       },
     ],
   };

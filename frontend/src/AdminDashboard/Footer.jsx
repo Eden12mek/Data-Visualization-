@@ -1,13 +1,21 @@
 import React from "react";
 import { Box, Text, Link, Flex, useColorModeValue, Icon } from "@chakra-ui/react";
 import { RiGithubFill, RiTwitterFill, RiMailFill } from "react-icons/ri";
+import { FaLinkedin, FaFacebook, FaBriefcase } from "react-icons/fa";
 
 const Footer = () => {
   const footerBgColor = useColorModeValue("gray.100", "gray.700");
   const iconColor = useColorModeValue("gray.600", "gray.400");
 
   return (
-    <Box bg={footerBgColor} py={4}>
+    <Box
+      bg={footerBgColor}
+      py={4}
+      position="fixed"
+      bottom={0}
+      width="90%"
+      ml={-5}
+    >
       <Flex
         direction={{ base: "column", md: "row" }}
         justify="space-between"
@@ -26,15 +34,18 @@ const Footer = () => {
           <Link mx={2} fontSize="sm" color="gray.500">
             Terms of Service
           </Link>
-          <Box mx={2}>
+          <Link href="https://github.com/Eden12mek" isExternal mx={2}>
             <Icon as={RiGithubFill} boxSize={5} color={iconColor} />
-          </Box>
-          <Box mx={2}>
+          </Link>
+          <Link href="https://x.com/Edu12moke" isExternal mx={2}>
             <Icon as={RiTwitterFill} boxSize={5} color={iconColor} />
-          </Box>
-          <Box mx={2}>
+          </Link>
+          <Link href="https://eden12mekonnen@gmail.com" isExternal mx={2}>
             <Icon as={RiMailFill} boxSize={5} color={iconColor} />
-          </Box>
+          </Link>
+          <Link href="https://edenmekonnen.netlify.app/" isExternal mx={2}>
+            <Icon as={FaBriefcase} boxSize={5} color={iconColor} />
+          </Link>
         </Flex>
       </Flex>
     </Box>
