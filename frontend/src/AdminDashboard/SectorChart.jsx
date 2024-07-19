@@ -14,11 +14,11 @@ const PieChart = ({ data }) => {
 
   const getRandomColor = (index) => {
     const colors = [
-      "#FF0080",
-      "#00BFFF",
-      "#FFD700",
-      "#32CD32",
-      "#FF4500",
+      '#8A3FFC',
+      '#20D5D2',
+      '#A11950',
+      '#4F2196',
+      '#092858',
       "#9400D3",
       // Add more colors as needed
     ];

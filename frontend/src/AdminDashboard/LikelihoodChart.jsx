@@ -10,18 +10,18 @@ const LikelihoodRadarChart = ({ data }) => {
         label: "Likelihood",
         data: data.map((entry) => entry.likelihood),
         backgroundColor: useColorModeValue(
-          "rgba(79, 59, 169, 0.7)",
-          "rgba(144, 104, 190, 0.7)"
+          '#3D79CF',
+          '#ED7D31',
         ),
         borderColor: useColorModeValue(
-          "rgba(79, 59, 169, 1)",
-          "rgba(144, 104, 190, 1)"
+          '#3D79CF',
+          '#ED7D31',
         ),
         borderWidth: 2,
         pointBackgroundColor: useColorModeValue("white", "black"),
         pointBorderColor: useColorModeValue(
-          "rgba(79, 59, 169, 1)",
-          "rgba(144, 104, 190, 1)"
+          '#00B0F0',
+          '#C00000',
         ),
       },
     ],

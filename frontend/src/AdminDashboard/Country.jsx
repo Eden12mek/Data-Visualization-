@@ -36,8 +36,9 @@ const CountryChart = ({ data }) => {
 
     const chartBackgroundColor =
       colorMode === "light"
-        ? "rgba(79, 59, 169, 0.7)"
-        : "rgba(144, 104, 190, 0.7)";
+        ? "#3D79CF"
+        : "#ED7D31";
+       
 
     setChartData({
       labels: sectorLabels,

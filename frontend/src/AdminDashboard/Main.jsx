@@ -138,9 +138,10 @@ const Main = () => {
           ml={200}
 
         >
-          <Container maxW="container.lg">
+          <Container maxW="container.lg" position="fixed">
             <Flex justify="space-between">
-              <Box w="40%" ml={700} mt={2}  >
+              <Text fontSize="2xl" color="white" ml={5} mt={5}>Dashboard</Text>
+              <Box w="40%" ml={600} mt={2}  >
                 <Input
                   type="text"
                   placeholder="Search..."
@@ -162,13 +163,18 @@ const Main = () => {
         </Box>
         {/* Sidebar */}
         <Box w="200px" h="100vh" bg="#2E4D61" position="fixed" color="white">
-          <SettingsIcon mr={2} /> Admin Dashboard
+          <Flex alignItems="center" mt={5}>
+            <Box as={MdPerson} mr={2} ml={4} boxSize="32px" />
+            <Text fontSize="2xl">Admin</Text>
+          </Flex>
           <Divider
-            mt={10}
+            mt={3}
             mb={8}
             borderColor={useColorModeValue("gray.300", "gray.600")}
           />
           <List spacing={2}>
+
+
             <ListItem
               cursor="pointer"
             >
@@ -179,8 +185,8 @@ const Main = () => {
                 display="flex"
                 alignItems="center"
               >
-                <ListIcon as={MdAdd} fontSize="xl" />
-                <Text ml={2}>Menu</Text>
+                <ListIcon as={MdDashboard} fontSize="xl" />
+                <Text ml={2}>Dashboard</Text>
               </Box>
             </ListItem>
 
@@ -200,20 +206,7 @@ const Main = () => {
               </Box>
             </ListItem>
 
-            <ListItem
-              cursor="pointer"
-            >
-              <Box
-                p={2}
-                _hover={{ bg: itemBoxHoverBg }}
-                borderRadius="md"
-                display="flex"
-                alignItems="center"
-              >
-                <ListIcon as={MdDashboard} fontSize="xl" />
-                <Text ml={2}>Dashboard</Text>
-              </Box>
-            </ListItem>
+
           </List>
         </Box>
 
@@ -252,7 +245,7 @@ const Main = () => {
             </Box>
           </Grid>
           <CountryChart data={data} />
-          <Footer/>
+          <Footer />
         </Flex>
       </Flex>
 

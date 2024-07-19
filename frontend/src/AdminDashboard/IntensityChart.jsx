@@ -9,10 +9,10 @@ const IntensityChart = ({ data }) => {
 
   const getColor = (value) => {
     const colors = [
-      '#7F00FF', // Green
-      '#F2B93B', // Yellow
-      '#FF8000', // Orange
-      '#FF453A', // Red
+      '#3ADBDD', 
+      '#7595FF', 
+      '#4EBDF5', 
+      '#1F3054', 
     
     ];
     const threshold = Math.max(...intensityData) / 4;
@@ -108,13 +108,13 @@ const IntensityChart = ({ data }) => {
     },
     animation: {
       duration: 4000,
-      easing: 'easeInOutQuart', // Use a smooth easing function
+      easing: 'easeInOutQuart', 
       mode: 'progressive',
     },
   };
 
   return (
-    <div style={{ margin: '50px', padding:"10px", fontFamily: 'Arial, sans-serif',  borderRadius: '8px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)' }}>
+    <div style={{ margin: '10px', padding:"10px", fontFamily: 'Arial, sans-serif',  borderRadius: '8px', boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)' }}>
       <Heading as="h2" mb={4}>Intensity Chart</Heading>
       <Bar data={chartData} options={chartOptions} plugins={[ChartDataLabels]} />
     </div>
