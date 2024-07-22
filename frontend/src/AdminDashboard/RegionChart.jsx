@@ -43,7 +43,7 @@ const RegionChart = ({ data }) => {
   return (
     <Box>
       <Heading as="h2" mb={4}>
-        Region Distribution
+        Distribution of Region
       </Heading>
       <Doughnut data={chartData} />
     </Box>

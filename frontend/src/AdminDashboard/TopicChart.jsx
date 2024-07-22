@@ -42,7 +42,7 @@ const TopicsPolarAreaChart = ({ data }) => {
   return (
     <Box>
       <Heading as="h2" mb={4}>
-        Topics Chart
+        Topics 
       </Heading>
       <PolarArea data={chartData} options={chartOptions} />
     </Box>

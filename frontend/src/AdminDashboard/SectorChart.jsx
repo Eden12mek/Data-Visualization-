@@ -61,7 +61,7 @@ const PieChart = ({ data }) => {
       overflow="hidden"
     >
       <Heading as="h2" mb={4}>
-        Sector Chart
+        Sectors 
       </Heading>
 
       <Pie data={chartData} options={chartOptions} />

@@ -53,7 +53,7 @@ const LikelihoodRadarChart = ({ data }) => {
       overflow="hidden" 
     >
       <Heading as="h2" mb={4} ml={6}>
-        Likelihood Chart
+        Likelihood by Country
       </Heading>
 
       <Radar data={chartData} options={chartOptions} />
